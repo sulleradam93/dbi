@@ -12,7 +12,7 @@
     <div class="py-12">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white shadow-md rounded-lg p-6">
-                <form action="{{ route('managers.update', $manager->id) }}" method="POST">
+                <form action="{{ route('managers.update', $user->id) }}" method="POST">
                     @csrf
                     @method('PUT')
 
@@ -21,7 +21,7 @@
                         <label for="name" class="form-label">{{ __('managers.edit.name') }}</label>
                         <input type="text" name="name" id="name"
                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('name') is-invalid @enderror"
-                               value="{{ old('name', $manager->name) }}" required>
+                               value="{{ old('name', $user->name) }}" required>
                         @error('name')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
@@ -32,8 +32,8 @@
                         <label for="role" class="form-label">{{ __('managers.edit.role') }}</label>
                         <select name="role" id="role" 
                                 class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('role') is-invalid @enderror">
-                            <option value="manager" {{ $manager->role == 'manager' ? 'selected' : '' }}>Menedzser</option>
-                            <option value="admin" {{ $manager->role == 'admin' ? 'selected' : '' }}>Admin</option>
+                            <option value="manager" {{ $user->role == 'manager' ? 'selected' : '' }}>Menedzser</option>
+                            <option value="admin" {{ $user->role == 'admin' ? 'selected' : '' }}>Admin</option>
                         </select>
                         @error('role')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -45,7 +45,7 @@
                         <label for="email" class="form-label">{{ __('managers.edit.email') }}</label>
                         <input type="email" name="email" id="email"
                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('email') is-invalid @enderror"
-                               value="{{ old('email', $manager->email) }}" required>
+                               value="{{ old('email', $user->email) }}" required>
                         @error('email')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
@@ -56,7 +56,7 @@
                         <label for="phone" class="form-label">{{ __('managers.edit.phone') }}</label>
                         <input type="text" name="phone" id="phone"
                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('phone') is-invalid @enderror"
-                               value="{{ old('phone', $manager->phone) }}">
+                               value="{{ old('phone', $user->phone) }}">
                         @error('phone')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror

@@ -14,10 +14,10 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-100">
                     <div class="grid gap-3 text-gray-700">
-                        <p><strong>{{ __('managers.show.name') }}:</strong> {{ $manager->name }}</p>
-                        <p><strong>{{ __('managers.show.role') }}:</strong> {{ $manager->role }}</p>
-                        <p><strong>{{ __('managers.show.email') }}:</strong> {{ $manager->email }}</p>
-                        <p><strong>{{ __('managers.show.phone') }}:</strong> {{ $manager->phone }}</p>
+                        <p><strong>{{ __('managers.show.name') }}:</strong> {{ $user->name }}</p>
+                        <p><strong>{{ __('managers.show.role') }}:</strong> {{ $user->role }}</p>
+                        <p><strong>{{ __('managers.show.email') }}:</strong> {{ $user->email }}</p>
+                        <p><strong>{{ __('managers.show.phone') }}:</strong> {{ $user->phone }}</p>
                     </div>
                 </div>
             </div>
